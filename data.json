@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "imageSource": "./iron-man.jpg",
+    "name": "Antony Edward Stark",
+    "yearOfBirth": "29 May, 1970",
+    "yearOfDeath": "",
+    "location": "Long Island, New York",
+    "description": "Iron Man is the superhero persona of Anthony Edward Stark, a businessman and engineer who runs the weapons manufacturing company Stark Industries. When Stark was captured in a war zone and sustained a severe heart wound, he built his Iron Man armor and escaped his captors. Iron Man's suits of armor grant him superhuman strength, flight, energy projection, and other abilities."
+  },
+  {
+    "id": 2,
+    "imageSource": "./rdj.jpg",
+    "name": "Robert Downey Jr.",
+    "yearOfBirth": "4 April, 1965",
+    "yearOfDeath": "",
+    "location": "Malibu, California",
+    "description": "Robert John Downey Jr. is an American actor and producer. His films as a leading actor have grossed over $14.3 billion worldwide, making him one of the highest-grossing actors of all time. Downey was the highest-paid actor in the world annually from 2013 to 2015."
+  },
+  {
+    "id": 3,
+    "imageSource": "./jarad.jpeg",
+    "name": "Jarad Anthony Higgins",
+    "yearOfBirth": "2 December, 1998",
+    "yearOfDeath": "4 December, 2019",
+    "location": "Chicago, Illinois",
+    "description": "Jarad Anthony Higgins, known professionally as Juice WRLD, was an American rapper, singer, and songwriter. He emerged as a leading figure in the emo and SoundCloud rap genres, which garnered mainstream attention during the mid-to-late 2010s. His stage name, which he said (represents taking over the world), was derived from the crime thriller film Juice (1992)."
+  },
+  {
+    "id": 4,
+    "imageSource": "./xxx.webp",
+    "name": "XXXTentacion",
+    "yearOfBirth": "23 January, 1998",
+    "yearOfDeath": "18 June, 2018",
+    "location": "Plantation, Florida",
+    "description": "Jahseh Dwayne Ricardo Onfroy, professionally known as XXXTentacion, was an American rapper, singer-songwriter, and record producer. Though a controversial figure due to his widely publicized legal troubles, XXXTentacion gained a cult following among his young fan base during his short career with his depression and alienation-themed music."
+  },
+  {
+    "id": 5,
+    "imageSource": "/cr7.jpeg",
+    "name": "Cristiano Ronaldo",
+    "yearOfBirth": "5 February, 1985",
+    "yearOfDeath": "",
+    "location": "Riyadh, Saudi Arabia",
+    "description": "Cristiano Ronaldo dos Santos Aveiro nicknamed CR7, is a Portuguese professional footballer who plays as a forward for and captains both Saudi Pro League club Al-Nassr and the Portugal national team. Widely regarded as one of the greatest players in history and the greatest Portuguese player ever, he has won numerous individual accolades throughout his career, including five Ballon d'Or awards, a record three UEFA Men's Player of the Year Awards, and four European Golden Shoes."
+  },
+  {
+    "id": 6,
+    "imageSource": "./bmw.jpeg",
+    "name": "Bayerische Motoren Werke",
+    "yearOfBirth": "7 March, 1916",
+    "yearOfDeath": "",
+    "location": "Munich, Germany",
+    "description": "Bayerische Motoren Werke Aktiengesellschaft (BMW AG), trading as BMW Group, sometimes anglicised as Bavarian Motor Works), is a German multinational conglomerate manufacturer of luxury vehicles and motorcycles headquartered in Munich, Germany."
+  },
+  {
+    "id": 7,
+    "imageSource": "./musk.jpg",
+    "name": "Elon Reeve Musk",
+    "yearOfBirth": "28 June, 1971",
+    "yearOfDeath": "",
+    "location": "Austin, Texas",
+    "description": "Elon Reeve Musk is a businessman and former public official who is the CEO and largest shareholder of Tesla and SpaceX. Musk has been the wealthiest person in the world since 2025, and became the first and only trillionaire in terms of US dollars in mid June 2026; however as of June 21, 2026, Forbes estimates his net worth to be US$951 billion."
+  }
+]
