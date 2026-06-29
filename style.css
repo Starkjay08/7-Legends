@@ -13,11 +13,10 @@
   --accent-secondary: #d4af37;   
   --reactor-opacity: 0.04;       
   
-  --header-height: 60px; /* Correction 4: Length/Height compressed from 80px to 60px */
+  --header-height: 60px;
   --drawer-width: 120px; 
   --transition-speed: 0.5s;
 
-  /* Correction 3: Light Mode Toggle Color Formulation (75% White : 25% Blue) */
   --toggle-rect-bg: #ffe76a26; 
 }
 
@@ -31,9 +30,7 @@
   --accent-secondary: #e63946;   
   --reactor-opacity: 0.12;       
 
-  /* Correction 3: Dark Mode Toggle Color Formulation (70% Deep Blue : 30% Black) */
   --toggle-rect-bg: #a9383f; 
-
 }
 
 * {
@@ -71,14 +68,14 @@ body {
   -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
 }
 
-/* Correction 1: Background opacity and configuration rolled back precisely to original parameters */
+/* Mobile-first: drawer hidden, visible on menu toggle */
 .vertical-menu-drawer {
   position: fixed;
   top: 0;
   left: calc(-1 * var(--drawer-width));
   width: var(--drawer-width);
   height: 100vh;
-  background-color: var(--bg-main); /* Restored original theme pairing */
+  background-color: var(--bg-main);
   border-right: 1px solid rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
@@ -98,25 +95,49 @@ body {
   left: 0;
 }
 
-/* Correction 2: Bold font profile, increased spacing parameters, and absolute 100% opacity restored */
+/* Desktop: drawer permanently visible */
+@media (min-width: 1024px) {
+  .vertical-menu-drawer {
+    position: relative;
+    left: 0;
+    height: auto;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 40px;
+    border-right: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  [data-theme="dark"] .vertical-menu-drawer {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  }
+}
+
 .vertical-brand-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 80px; /* Amplified layout separation gap */
+  gap: 80px;
+}
+
+@media (min-width: 1024px) {
+  .vertical-brand-container {
+    flex-direction: row;
+    gap: 40px;
+  }
 }
 
 .vertical-char {
-  font-family: var(--font-display); /* Switched back to the bold display Syne font */
+  font-family: var(--font-display);
   font-size: 2rem;
-  font-weight: 740; /* Robust bold weight */
-  opacity: 0.5; /* Absolute 100% visibility setting */
+  font-weight: 740;
+  opacity: 0.5;
   background: linear-gradient(135deg, var(--accent-color), var(--accent-secondary));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* Correction 3: Removed child icons and wired structural system color blend overrides */
 .stretched-toggle-rect {
   width: calc(100% - 32px); 
   height: 50px;
@@ -160,6 +181,7 @@ body {
   pointer-events: none;
 }
 
+/* Mobile header visible, desktop hidden */
 .invisible-header {
   height: var(--header-height);
   width: 100%;
@@ -171,6 +193,12 @@ body {
   opacity: 0.9;
   backdrop-filter: blur(10px);
   transition: background-color var(--transition-speed) ease, height var(--transition-speed) ease;
+}
+
+@media (min-width: 1024px) {
+  .invisible-header {
+    display: none;
+  }
 }
 
 .menu-box-btn {
@@ -220,6 +248,7 @@ body {
   box-shadow: inset -4px -2px 0 0 #ffffff; 
 }
 
+/* Mobile: single column layout */
 .main-content {
   flex: 1;
   display: flex;
@@ -229,6 +258,18 @@ body {
   width: 100%;
   max-width: 520px;
   margin: 0 auto;
+}
+
+/* Desktop: two-column layout */
+@media (min-width: 1024px) {
+  .main-content {
+    flex-direction: row;
+    gap: 60px;
+    max-width: 100%;
+    padding: 60px 80px;
+    align-items: flex-start;
+    justify-content: center;
+  }
 }
 
 .faded-gray-wrapper {
@@ -242,6 +283,15 @@ body {
   position: relative;
   margin-bottom: 32px;
   transition: background-color var(--transition-speed) ease;
+}
+
+@media (min-width: 1024px) {
+  .faded-gray-wrapper {
+    width: 500px;
+    height: 500px;
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
 }
 
 .square-image-viewport {
@@ -298,9 +348,19 @@ body {
   background-color: var(--accent-color);
 }
 
+/* Mobile: full width */
 .text-housing-unit {
   width: 100%;
   padding: 0 8px;
+}
+
+/* Desktop: constrained width */
+@media (min-width: 1024px) {
+  .text-housing-unit {
+    width: 400px;
+    padding: 0;
+    padding-top: 40px;
+  }
 }
 
 .text-housing-unit h3 {
@@ -310,6 +370,12 @@ body {
   margin-bottom: 20px;
   letter-spacing: -0.03em;
   line-height: 1.1;
+}
+
+@media (min-width: 1024px) {
+  .text-housing-unit h3 {
+    font-size: 2.5rem;
+  }
 }
 
 .meta-data {
